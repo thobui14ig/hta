@@ -9,7 +9,7 @@ import { VariableModule } from 'src/variable/variable.module';
 
 const multerOptions: MulterModuleOptions = {
   storage: multer.diskStorage({
-    destination: './../uploads',
+    destination: './../../uploads',
     filename: (req, file, cb) => {
       const randomName = Array(32)
         .fill(null)
