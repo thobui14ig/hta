@@ -12,18 +12,18 @@ export class PostEntity {
   @PrimaryGeneratedColumn()
   id?: number;
 
-  @Column({ name: 'post_id' })
+  @Column({ name: 'post_id', nullable: true })
   postId?: string;
 
-  @Column({ name: 'author_id' })
+  @Column({ name: 'author_id', nullable: true })
   authorId?: number;
 
-  @Column({ name: 'author_name' })
+  @Column({ name: 'author_name', nullable: true })
   authorName?: string;
 
-  @Column({ name: 'content' })
+  @Column({ name: 'content', nullable: true })
   content?: string;
 
-  @Column({ name: 'time' })
+  @Column({ name: 'time', nullable: true })
   time?: Date;
 }

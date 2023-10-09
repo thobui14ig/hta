@@ -18,23 +18,23 @@ __decorate([
     __metadata("design:type", Number)
 ], PostEntity.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'post_id' }),
+    (0, typeorm_1.Column)({ name: 'post_id', nullable: true }),
     __metadata("design:type", String)
 ], PostEntity.prototype, "postId", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'author_id' }),
+    (0, typeorm_1.Column)({ name: 'author_id', nullable: true }),
     __metadata("design:type", Number)
 ], PostEntity.prototype, "authorId", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'author_name' }),
+    (0, typeorm_1.Column)({ name: 'author_name', nullable: true }),
     __metadata("design:type", String)
 ], PostEntity.prototype, "authorName", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'content' }),
+    (0, typeorm_1.Column)({ name: 'content', nullable: true }),
     __metadata("design:type", String)
 ], PostEntity.prototype, "content", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'time' }),
+    (0, typeorm_1.Column)({ name: 'time', nullable: true }),
     __metadata("design:type", Date)
 ], PostEntity.prototype, "time", void 0);
 PostEntity = __decorate([
