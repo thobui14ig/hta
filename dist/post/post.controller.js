@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const post_service_1 = require("./post.service");
 const create_post_dto_1 = require("./dto/create-post.dto");
 const update_post_dto_1 = require("./dto/update-post.dto");
+const guard_1 = require("../libs/guard/guard");
 let PostController = class PostController {
     constructor(postService) {
         this.postService = postService;
@@ -74,6 +75,7 @@ __decorate([
 ], PostController.prototype, "remove", null);
 PostController = __decorate([
     (0, common_1.Controller)('post'),
+    (0, guard_1.Public)(),
     __metadata("design:paramtypes", [post_service_1.PostService])
 ], PostController);
 exports.PostController = PostController;
