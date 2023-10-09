@@ -34,6 +34,8 @@ const user_topic_entity_1 = require("./user-topic/user_topic.entity");
 const user_topic_module_1 = require("./user-topic/user_topic.module");
 const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
+const post_module_1 = require("./post/post.module");
+const post_entity_1 = require("./post/post.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -60,9 +62,9 @@ AppModule = __decorate([
                     file_entity_1.FileEntity,
                     user_topic_entity_1.UserTopic,
                     user_chapter_entity_1.UserChapterEntity,
+                    post_entity_1.PostEntity,
                 ],
                 synchronize: true,
-                logging: true,
             }),
             topic_module_1.TopicModule,
             variable_module_1.VariableModule,
@@ -74,6 +76,7 @@ AppModule = __decorate([
             file_module_1.FileModule,
             user_topic_module_1.UserTopicModule,
             user_chapter_module_1.UserChapterModule,
+            post_module_1.PostModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [

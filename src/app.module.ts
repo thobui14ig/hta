@@ -25,6 +25,8 @@ import { UserTopic } from './user-topic/user_topic.entity';
 import { UserTopicModule } from './user-topic/user_topic.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { PostModule } from './post/post.module';
+import { PostEntity } from './post/post.entity';
 
 @Module({
   imports: [
@@ -49,9 +51,10 @@ import { join } from 'path';
         FileEntity,
         UserTopic,
         UserChapterEntity,
+        PostEntity,
       ],
       synchronize: true,
-      logging: true,
+      // logging: true,
     }),
 
     TopicModule,
@@ -64,6 +67,7 @@ import { join } from 'path';
     FileModule,
     UserTopicModule,
     UserChapterModule,
+    PostModule,
   ],
   controllers: [AppController],
   providers: [
