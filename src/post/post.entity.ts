@@ -16,7 +16,7 @@ export class PostEntity {
   postId?: string;
 
   @Column({ name: 'author_id', nullable: true })
-  authorId?: number;
+  authorId?: string;
 
   @Column({ name: 'author_name', nullable: true })
   authorName?: string;

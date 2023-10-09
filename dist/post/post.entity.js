@@ -23,7 +23,7 @@ __decorate([
 ], PostEntity.prototype, "postId", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: 'author_id', nullable: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], PostEntity.prototype, "authorId", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: 'author_name', nullable: true }),

@@ -1,6 +1,6 @@
 export declare class CreatePostDto {
     postId: string;
-    authorId: number;
+    authorId: string;
     authorName: string;
     content: string;
     time: Date;
