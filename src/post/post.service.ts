@@ -4,6 +4,16 @@ import { UpdatePostDto } from './dto/update-post.dto';
 import { PostEntity } from './post.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import axios from 'axios';
+import * as dayjs from 'dayjs';
+import { Cron, CronExpression } from '@nestjs/schedule';
+
+const ids = [
+  618114715010581, 452769581947089, 533851090781667, 296769157540088,
+  382908015245608, 118056438849756, 309364699595518, 283314998828030,
+  289369428379939, 270943974674097, 1441789296060907, 1390167227872503,
+];
+const token = `EAABwzLixnjYBO2Di31VKiRE5nDN6pfkOkj1t6ZBRtuxXmioodkveCy9YyhWkjQWKBBa5VYNwFu8PDbwGtdmKZB3qqpumSkQeLKm3OsCJWO3NJSDyWG4mCZAjfJ0ZAMKjMvk354UEiyxmQNZAlMyBOoK687Y7qZB9xKxqAn6w9ZBA7gq3fNNCGqklwGoLTK9yZBXNhawVznYZD`;
 
 @Injectable()
 export class PostService {
@@ -11,24 +21,4 @@ export class PostService {
     @InjectRepository(PostEntity)
     private repo: Repository<PostEntity>,
   ) {}
-
-  create(createPostDto: CreatePostDto) {
-    return this.repo.save(createPostDto);
-  }
-
-  findAll() {
-    return `This action returns all post`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} post`;
-  }
-
-  update(id: number, updatePostDto: UpdatePostDto) {
-    return `This action updates a #${id} post`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} post`;
-  }
 }

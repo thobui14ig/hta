@@ -14,15 +14,6 @@ async function bootstrap() {
     .setDescription('The cats API description')
     .setVersion('1.0')
     .addTag('cats')
-    // .addBearerAuth(
-    //   {
-    //     type: 'http',
-    //     scheme: 'bearer',
-    //     bearerFormat: 'Token',
-    //   },
-    //   'access-token',
-    // )
-    // .addCookieAuth('token')
     .build();
   const document = SwaggerModule.createDocument(app, configSwag);
   SwaggerModule.setup('api', app, document);
@@ -34,6 +25,7 @@ async function bootstrap() {
       'http://103.79.143.150',
       'http://buithanhtho.name.vn',
       'https://buithanhtho.name.vn',
+      'http://localhost:5173',
     ],
     credentials: true,
   });

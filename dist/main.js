@@ -24,6 +24,7 @@ async function bootstrap() {
             'http://103.79.143.150',
             'http://buithanhtho.name.vn',
             'https://buithanhtho.name.vn',
+            'http://localhost:5173',
         ],
         credentials: true,
     });

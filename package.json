@@ -24,11 +24,14 @@
     "@nestjs/jwt": "^10.0.3",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/schedule": "^3.0.4",
     "@nestjs/serve-static": "^4.0.0",
     "@nestjs/swagger": "^6.3.0",
     "@nestjs/typeorm": "^9.0.1",
+    "axios": "^1.5.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.1.3",
     "googleapis": "^120.0.0",
     "lodash": "^4.17.21",
@@ -37,7 +40,9 @@
     "rxjs": "^7.5.5",
     "swagger-ui-express": "^4.6.3",
     "typeorm": "^0.3.16",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.3/xlsx-0.19.3.tgz"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.3/xlsx-0.19.3.tgz",
+    "@nestjs/platform-socket.io": "^10.1.3",
+    "@nestjs/websockets": "^10.1.3"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.3.0",

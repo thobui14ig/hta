@@ -27,9 +27,12 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { PostModule } from './post/post.module';
 import { PostEntity } from './post/post.entity';
+import { ScheduleModule } from '@nestjs/schedule';
+import { GatewayModules } from './gateway/gateway.modules';
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'frontend'),
       exclude: ['/api*'], // Exclude API routes
@@ -68,6 +71,7 @@ import { PostEntity } from './post/post.entity';
     UserTopicModule,
     UserChapterModule,
     PostModule,
+    GatewayModules,
   ],
   controllers: [AppController],
   providers: [

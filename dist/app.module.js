@@ -36,11 +36,14 @@ const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
 const post_module_1 = require("./post/post.module");
 const post_entity_1 = require("./post/post.entity");
+const schedule_1 = require("@nestjs/schedule");
+const gateway_modules_1 = require("./gateway/gateway.modules");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
+            schedule_1.ScheduleModule.forRoot(),
             serve_static_1.ServeStaticModule.forRoot({
                 rootPath: (0, path_1.join)(__dirname, '..', 'frontend'),
                 exclude: ['/api*'],
@@ -77,6 +80,7 @@ AppModule = __decorate([
             user_topic_module_1.UserTopicModule,
             user_chapter_module_1.UserChapterModule,
             post_module_1.PostModule,
+            gateway_modules_1.GatewayModules,
         ],
         controllers: [app_controller_1.AppController],
         providers: [

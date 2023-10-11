@@ -17,24 +17,15 @@ const common_1 = require("@nestjs/common");
 const post_entity_1 = require("./post.entity");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
+const ids = [
+    618114715010581, 452769581947089, 533851090781667, 296769157540088,
+    382908015245608, 118056438849756, 309364699595518, 283314998828030,
+    289369428379939, 270943974674097, 1441789296060907, 1390167227872503,
+];
+const token = `EAABwzLixnjYBO2Di31VKiRE5nDN6pfkOkj1t6ZBRtuxXmioodkveCy9YyhWkjQWKBBa5VYNwFu8PDbwGtdmKZB3qqpumSkQeLKm3OsCJWO3NJSDyWG4mCZAjfJ0ZAMKjMvk354UEiyxmQNZAlMyBOoK687Y7qZB9xKxqAn6w9ZBA7gq3fNNCGqklwGoLTK9yZBXNhawVznYZD`;
 let PostService = class PostService {
     constructor(repo) {
         this.repo = repo;
-    }
-    create(createPostDto) {
-        return this.repo.save(createPostDto);
-    }
-    findAll() {
-        return `This action returns all post`;
-    }
-    findOne(id) {
-        return `This action returns a #${id} post`;
-    }
-    update(id, updatePostDto) {
-        return `This action updates a #${id} post`;
-    }
-    remove(id) {
-        return `This action removes a #${id} post`;
     }
 };
 PostService = __decorate([
