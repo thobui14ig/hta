@@ -56,7 +56,6 @@ let AppGateway = class AppGateway {
                     created_time: dayjs(post === null || post === void 0 ? void 0 : post.created_time).format('YYYY-MM-DD HH:mm:ss'),
                 };
             });
-            console.log(2222, posts);
             void this.server.emit('nhandon', posts);
         }
         catch (error) {
