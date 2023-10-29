@@ -29,6 +29,7 @@ import { PostModule } from './post/post.module';
 import { PostEntity } from './post/post.entity';
 import { ScheduleModule } from '@nestjs/schedule';
 import { GatewayModules } from './gateway/gateway.modules';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -37,41 +38,42 @@ import { GatewayModules } from './gateway/gateway.modules';
       rootPath: join(__dirname, '..', 'frontend'),
       exclude: ['/api*'], // Exclude API routes
     }),
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: '103.79.143.150',
-      port: 3306,
-      username: 'root',
-      password: '123456',
-      database: 'hoctienganh',
-      entities: [
-        TopicEntity,
-        VariableEntity,
-        ChapterEntity,
-        ExcerciseVariableEntity,
-        ExcerciseEntity,
-        UserEntity,
-        FileEntity,
-        UserTopic,
-        UserChapterEntity,
-        PostEntity,
-      ],
-      synchronize: true,
-      // logging: true,
-    }),
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: '103.79.143.150',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: '123456',
+    //   database: 'hoctienganh',
+    //   entities: [
+    //     TopicEntity,
+    //     VariableEntity,
+    //     ChapterEntity,
+    //     ExcerciseVariableEntity,
+    //     ExcerciseEntity,
+    //     UserEntity,
+    //     FileEntity,
+    //     UserTopic,
+    //     UserChapterEntity,
+    //     PostEntity,
+    //   ],
+    //   synchronize: true,
+    //   // logging: true,
+    // }),
 
-    TopicModule,
-    VariableModule,
-    ExcerciseModule,
-    ChapterModule,
-    ExerciseVariableModule,
-    AuthModule,
-    UserModule,
-    FileModule,
-    UserTopicModule,
-    UserChapterModule,
-    PostModule,
+    // TopicModule,
+    // VariableModule,
+    // ExcerciseModule,
+    // ChapterModule,
+    // ExerciseVariableModule,
+    // AuthModule,
+    // UserModule,
+    // FileModule,
+    // UserTopicModule,
+    // UserChapterModule,
+    // PostModule,
     GatewayModules,
+    JwtModule,
   ],
   controllers: [AppController],
   providers: [
